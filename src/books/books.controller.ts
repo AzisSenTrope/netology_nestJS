@@ -14,7 +14,7 @@ export class BooksController {
 
   @Get(':id')
   getBook(@Param() {id}: QueryParams): Promise<BookItem> {
-    return this.booksService.getBook(id); //
+    return this.booksService.getBook(id);
   }
 
   @Post()
