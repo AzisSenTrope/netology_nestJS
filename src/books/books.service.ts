@@ -10,10 +10,7 @@ export class BooksService {
   constructor(
       @InjectModel(Book.name) private BookModel: Model<BookDocument>,
       @InjectConnection() private connection: Connection,
-  ) {
-    //
-  }
-  private readonly books: BookItem[] = [];
+  ) {}
 
   async createBook(book: BookItem): Promise<BookDocument> {
     const currentBook = new this.BookModel(book);
